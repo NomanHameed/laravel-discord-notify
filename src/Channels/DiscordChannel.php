@@ -34,6 +34,14 @@ class DiscordChannel
         }
 
         $webhookUrl = $message['webhook_url'];
+
+        if (!$this->isValidDiscordWebhook($webhookUrl)) {
+            if ($this->logErrors) {
+                Log::error('Invalid Discord webhook URL provided', ['url' => $webhookUrl]);
+            }
+            return;
+        }
+
         $payload = [
             'content' => $message['content'] ?? null,
             'embeds' => $message['embeds'] ?? [],
@@ -55,14 +63,26 @@ class DiscordChannel
     }
 
     /**
+     * Validate if the URL is a valid Discord webhook.
+     */
+    protected function isValidDiscordWebhook(string $url): bool
+    {
+        return (bool) preg_match(
+            '#^https://discord\.com/api/webhooks/\d+/[\w-]+$#',
+            $url
+        );
+    }
+
+    /**
      * Handle exceptions.
      */
     protected function handleException(RequestException $e)
     {
         if ($this->logErrors) {
+            $response = $e->getResponse();
             Log::error('Discord notification failed: ' . $e->getMessage(), [
-                'response' => $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null,
-                'status_code' => $e->getResponse() ? $e->getResponse()->getStatusCode() : null,
+                'response' => $response ? $response->getBody()->getContents() : null,
+                'status_code' => $response ? $response->getStatusCode() : null,
             ]);
         }
 

@@ -22,6 +22,12 @@ class DiscordNotificationsServiceProvider extends ServiceProvider
             __DIR__ . '/config/discord-notifications.php',
             'discord-notifications'
         );
+
+        // Register the Discord notification channel
+        $this->app->make(\Illuminate\Notifications\ChannelManager::class)
+            ->extend('discord', function ($app) {
+                return new \Tapday\Notifications\Channels\DiscordChannel();
+            });
     }
 
     /**
