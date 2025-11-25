@@ -1,6 +1,10 @@
-# Laravel Discord Notifications
+# Laravel Discord Notify
 
-A Laravel package for sending notifications to Discord channels via webhooks.
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/nomanhameed/laravel-discord-notify.svg?style=flat-square)](https://packagist.org/packages/nomanhameed/laravel-discord-notify)
+[![Total Downloads](https://img.shields.io/packagist/dt/nomanhameed/laravel-discord-notify.svg?style=flat-square)](https://packagist.org/packages/nomanhameed/laravel-discord-notify)
+[![License](https://img.shields.io/packagist/l/nomanhameed/laravel-discord-notify.svg?style=flat-square)](https://packagist.org/packages/nomanhameed/laravel-discord-notify)
+
+A Laravel package for sending notifications to Discord channels via webhooks with rich embed support.
 
 ## Installation
 
@@ -147,6 +151,18 @@ The `config/discord-notifications.php` file contains all configuration options:
 - `channels`: Array of channel configurations
 - `log_errors`: Whether to log errors
 - `throw_exceptions`: Whether to throw exceptions on failure
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Issues
+
+If you discover any issues, please report them via [GitHub Issues](https://github.com/nomanhameed/laravel-discord-notify/issues).
+
+## Credits
+
+- [Noman Hameed](https://github.com/NomanHameed)
 
 ## License
 
