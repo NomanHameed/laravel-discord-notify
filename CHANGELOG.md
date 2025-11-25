@@ -21,4 +21,4 @@ All notable changes to `nomanhameed/laravel-discord-notify` will be documented i
 ### Security
 - Added Discord webhook URL validation to prevent unauthorized requests
 
-[1.0.0]: https://github.com/NomanHameed/discordNotification/releases/tag/v1.0.0
+[1.0.0]: https://github.com/nomanhameed/laravel-discord-notify/releases/tag/v1.0.0
