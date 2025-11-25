@@ -1,9 +1,9 @@
 <?php
 
-namespace Tapday\Notifications\Notifications;
+namespace NomanHameed\DiscordNotify\Notifications;
 
 use Illuminate\Notifications\Notification;
-use Tapday\Notifications\Channels\DiscordChannel;
+use NomanHameed\DiscordNotify\Channels\DiscordChannel;
 
 class DiscordNotification extends Notification
 {

@@ -1,6 +1,6 @@
 {
-    "name": "tapday/notification",
-    "description": "This package is to handle Notifications of Shop on Discord.",
+    "name": "nomanhameed/laravel-discord-notify",
+    "description": "A Laravel package for sending notifications to Discord channels via webhooks with rich embed support.",
     "type": "library",
     "keywords": ["laravel", "discord", "notifications", "webhook"],
     "license": "MIT",
@@ -21,21 +21,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Tapday\\Notifications\\": "src/"
+            "NomanHameed\\DiscordNotify\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tapday\\Notifications\\Tests\\": "tests/"
+            "NomanHameed\\DiscordNotify\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Tapday\\Notifications\\DiscordNotificationsServiceProvider"
+                "NomanHameed\\DiscordNotify\\DiscordNotificationsServiceProvider"
             ],
             "aliases": {
-                "Discord": "Tapday\\Notifications\\Facades\\Discord"
+                "Discord": "NomanHameed\\DiscordNotify\\Facades\\Discord"
             }
         }
     },

@@ -1,9 +1,9 @@
 <?php
 
-namespace Tapday\Notifications;
+namespace NomanHameed\DiscordNotify;
 
 use Illuminate\Support\ServiceProvider;
-use Tapday\Notifications\Services\DiscordService;
+use NomanHameed\DiscordNotify\Services\DiscordService;
 
 class DiscordNotificationsServiceProvider extends ServiceProvider
 {
@@ -26,7 +26,7 @@ class DiscordNotificationsServiceProvider extends ServiceProvider
         // Register the Discord notification channel
         $this->app->make(\Illuminate\Notifications\ChannelManager::class)
             ->extend('discord', function ($app) {
-                return new \Tapday\Notifications\Channels\DiscordChannel();
+                return new \NomanHameed\DiscordNotify\Channels\DiscordChannel();
             });
     }
 

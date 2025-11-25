@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `tapday/notification` will be documented in this file.
+All notable changes to `nomanhameed/laravel-discord-notify` will be documented in this file.
 
 ## [1.0.0] - 2025-01-24
 
@@ -21,4 +21,4 @@ All notable changes to `tapday/notification` will be documented in this file.
 ### Security
 - Added Discord webhook URL validation to prevent unauthorized requests
 
-[1.0.0]: https://github.com/tapday/notification/releases/tag/v1.0.0
+[1.0.0]: https://github.com/NomanHameed/discordNotification/releases/tag/v1.0.0

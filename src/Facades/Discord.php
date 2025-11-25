@@ -1,6 +1,6 @@
 <?php
 
-namespace Tapday\Notifications\Facades;
+namespace NomanHameed\DiscordNotify\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static array getChannels()
  * @method static bool hasChannel(string $channelName)
  * @method static void addChannel(string $name, string $webhookUrl, string $username = null, string $avatarUrl = null)
- * @method static \Tapday\Notifications\Notifications\DiscordNotification notification()
+ * @method static \NomanHameed\DiscordNotify\Notifications\DiscordNotification notification()
  */
 class Discord extends Facade
 {
