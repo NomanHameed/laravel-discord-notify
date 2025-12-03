@@ -39,6 +39,10 @@
             }
         }
     },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html build/coverage"
+    },
     "minimum-stability": "stable",
     "prefer-stable": true
 }
