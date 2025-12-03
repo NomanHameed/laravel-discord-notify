@@ -2,6 +2,15 @@
 
 All notable changes to `nomanhameed/laravel-discord-notify` will be documented in this file.
 
+## [1.0.2] - 2025-12-03
+
+### Added
+- Added support for Laravel 12.x
+- Added support for Orchestra Testbench 10.x
+
+### Fixed
+- Fixed PHPUnit exit code issue by disabling failOnWarning for coverage driver warnings
+
 ## [1.0.1] - 2025-11-25
 
 ### Changed
