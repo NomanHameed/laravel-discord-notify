@@ -2,6 +2,15 @@
 
 All notable changes to `nomanhameed/laravel-discord-notify` will be documented in this file.
 
+## [1.0.3] - 2026-05-14
+
+### Fixed
+- Discord rejected payloads where `content` exceeded 2000 characters (`400 Bad Request: "Must be 2000 or fewer in length"`). `DiscordChannel::send()` now splits oversize content into successive webhook posts, attaching embeds only to the first post and preferring newline break points for cleaner stack-trace splits. The fan-out is capped at 5 posts; if the content would need more, the final post is suffixed with `… [truncated]`.
+- Defensive caps applied to all embed fields (title, description, footer, field name, field value) and to embeds-per-message / fields-per-embed counts, so an oversize embed no longer rejects the whole request.
+
+### Added
+- `DiscordChannelTest` covering single-post, splitting, embed-on-first-chunk, truncation-on-cap, embed-field caps, and no-op-when-empty.
+
 ## [1.0.2] - 2025-12-03
 
 ### Added
